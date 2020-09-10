@@ -84,6 +84,7 @@ function setup() {
 
 
 function draw() {
+    
        
     cbackground();
   
@@ -204,7 +205,7 @@ function draw() {
   chain.display();
   textSize(35)
   fill("red")
-  text("Score  " + score, width-300, 50)
+  text("Score  " + score, 550, 50)
 
 }
 function mouseDragged(){
