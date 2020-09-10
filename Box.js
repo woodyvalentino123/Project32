@@ -25,8 +25,8 @@ display(){
 
 }
 score(){
-    if (this.Visiblity < 0 && this.Visiblity > -1005){
-      score++;
+    if (this.Visiblity < 0 && this.Visiblity > -105){
+      score = score + 1;
     }
   }
 

@@ -87,9 +87,7 @@ function draw() {
        
     cbackground();
   
-   textSize(35)
-        fill("red")
-        text("Score  " + score, width-300, 50)
+  
     
   drawSprites();
   
@@ -204,6 +202,9 @@ function draw() {
 
   hexagon1.display();
   chain.display();
+  textSize(35)
+  fill("red")
+  text("Score  " + score, width-300, 50)
 
 }
 function mouseDragged(){
