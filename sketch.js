@@ -6,14 +6,17 @@ const Body = Matter.Body;
 const Constraint = Matter.Constraint;
 var radius = 20;
 var score = 0;
+var backgroundImg
+
 
 function preload()
 {
-	
+	cbackground();
 }
 
 function setup() {
-	createCanvas(800, 700);
+    createCanvas(800, 700);
+    background('black');
 
 
 	engine = Engine.create();
@@ -84,10 +87,15 @@ function setup() {
 
 
 function draw() {
+    if (backgroundImg){
+        background(backgroundImg);
+    }
     
-       
-    cbackground();
-  
+    textSize(35)
+  fill("red")
+  text("Score  " + score, 550, 50)
+
+    
   
     
   drawSprites();
@@ -203,10 +211,7 @@ function draw() {
 
   hexagon1.display();
   chain.display();
-  textSize(35)
-  fill("red")
-  text("Score  " + score, 550, 50)
-
+  
 }
 function mouseDragged(){
     Matter.Body.setPosition(hexagon1.body,{x:mouseX,y:mouseY})   
@@ -228,12 +233,13 @@ function keyPressed(){
         var datetime = responseJSON.datetime;
         var hour = datetime.slice(11,13);
         if(hour>=06 && hour<=19){
-            background("pink")
+          var  bg = "Sprite/background1.jpg"
         }
         else{
-            background('black');
+            bg = "Sprite/background2.jpg"
         
         }
+        backgroundImg = loadImage(bg)
         }
     
 

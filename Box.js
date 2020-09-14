@@ -2,7 +2,7 @@ class Box extends BaseClass{
     constructor(x,y){
         super(x,y,30,30);
         rect(x,y,30,30);
-        this.visibility = 255;
+        this.visibility = 105;
 }
 display(){
     if(this.body.speed<3){
@@ -11,7 +11,7 @@ display(){
         push();
        translate(pos.x,pos.y)
        rotate(angle)
-       fill("blue")
+       fill("red")
         rectMode(CENTER)
         rect(0,0,30,30);
         pop();
@@ -25,7 +25,8 @@ display(){
 
 }
 score(){
-    if (this.Visiblity < 0 && this.Visiblity > -105){
+    if (this.visibility < 0 && this.visibility > -1005){
+        
       score = score + 1;
     }
   }
